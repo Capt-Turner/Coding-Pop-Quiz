@@ -1,0 +1,40 @@
+body, html {
+    height:100%;
+    background-image:linear-gradient(white, teal);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+.topbar {
+    font-size:125%;
+    font-family:'Courier New';
+}
+#timer {
+    text-align:right;
+    margin-top:-25px;
+
+}
+.container {
+    position:relative;
+    margin-top:150px;
+    margin-right:200px;
+    margin-left:200px;
+}
+.container h1, p {
+    text-align:center;
+}
+.container h1 {
+    font-family:Impact;
+    text-shadow:3px 3px 2px grey;
+    font-size:250%;
+}
+.container p {
+    font-family:Arial;
+    font-size:150%;
+}
+.container button {
+    margin:0;
+    left:45%;
+    position:absolute;
+    transform: translateY(50%, 50%);
+}
