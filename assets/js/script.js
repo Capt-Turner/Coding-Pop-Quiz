@@ -75,22 +75,22 @@ function questionone(){
             function wrong(){
                 seconds = Number(seconds) - 10;
                 questionthree();
-            }
+            };
         ansB.addEventListener("click", wrong)
             function wrong(){
                 seconds = Number(seconds) - 10;
                 questionthree();
-            }
+            };
         ansC.addEventListener("click", wrong)
             function wrong(){
                 seconds = Number(seconds) - 10;
                 questionthree();
-            }
+            };
         ansD.addEventListener("click", correct)
             function correct(){
                 score = Number(score) + 10;
                 questionthree();
-             }
+             };
         function questionthree(){
             heading.textContent = "Question 3";
             question.textContent = "Which of these are not a semantic HTML elements";
@@ -102,22 +102,22 @@ function questionone(){
                 function correct(){
                     score = Number(score) + 10;
                     questionfour();
-            }
+            };
             ansB.addEventListener("click", wrong)
                 function wrong(){
                     seconds = Number(seconds) - 10;
                     questionfour();
-            }
+            };
             ansC.addEventListener("click", wrong)
                 function wrong(){
                     seconds = Number(seconds) - 10;
                     questionfour();
-            }
+            };
             ansD.addEventListener("click", wrong)
                 function wrong(){
                     seconds = Number(seconds) - 10;
                     questionfour();
-            }
+            };
             function questionfour(){
                 heading.textContent = "Question 4";
                 question.textContent = "How do you define a variable in a CSS file?";
@@ -129,22 +129,22 @@ function questionone(){
                     function correct(){
                         score = Number(score) + 10;
                         questionfive();
-                    }
+                    };
                 ansB.addEventListener("click", wrong)
                     function wrong(){
                         seconds = Number(seconds) - 10;
                         questionfive();
-                    }
+                    };
                 ansC.addEventListener("click", wrong)
                     function wrong(){
                         seconds = Number(seconds) - 10;
                         questionfive();
-                    }
+                    };
                 ansD.addEventListener("click", wrong)
                     function wrong(){
                         seconds = Number(seconds) - 10;
                         questionfive();
-                    }
+                    };
                 function questionfive(){
                     heading.textContent = "Question 5";
                     question.textContent = "To submit user text input you would start with what kind of HTML element?";
@@ -156,26 +156,26 @@ function questionone(){
                         function wrong(){
                             seconds = Number(seconds) - 10;
                             gameover();
-                        }
+                        };
                     ansB.addEventListener("click", wrong)
                         function wrong(){
                             seconds = Number(seconds) - 10;
                             gameover();
-                        }
+                        };
                     ansC.addEventListener("click", correct)
                         function correct(){
                             score = Number(score) + 10;
                             gameover();
-                        }
+                        };
                     ansD.addEventListener("click", wrong)
                         function wrong(){
                             seconds = Number(seconds) - 10;
                             gameover();
-                        }
-                    }
-                }
-            }
-        }
+                        };
+                    };
+                };
+            };
+        };
     };
 
 function gamestart(){
@@ -200,10 +200,18 @@ function gameoverscreen(){
     save.addEventListener("click", submithandler);
     function submithandler(event){
         event.preventDefault;
-        localStorage.setItem("Initials", input.value)
-        localStorage.setItem("Score", score)
+        localStorage.setItem("Initials", input.value);
+        localStorage.setItem("Score", score);
+        location.reload();
     }
 }
+
+// scores screen
+
+function viewstats(){
+    heading.textContent = "Highscores";
+    text.textContent = localStorage.getItem("Initials") + localStorage.getItem("Score");
+};
 // starts the game when the button is clicked
 startbtn.addEventListener("click", gamestart);
 
