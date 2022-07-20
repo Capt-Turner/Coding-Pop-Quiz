@@ -8,7 +8,7 @@ Once you click the start button, you will have one minute to answer all the give
 
 ## Screenshot 
 
-
+<img src="./assets/images/Example.png" height="200" width="500"></img>
 
 
 
@@ -20,3 +20,4 @@ Once you click the start button, you will have one minute to answer all the give
 .3 - adding functioning timer
 .4 - added gameover screen(wip) and nested timer inside question function
 .5 - added score counter and system to determine correct or inccorect answers
+.6 - fixed some timer bugs with help of wonderful tester (my wife)

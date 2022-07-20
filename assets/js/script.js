@@ -10,15 +10,22 @@ var score = 0;
 
 // the game 
 function questionone(){
-    var seconds = 91;
+    var seconds = 61;
     var timerInterval = setInterval(function(){
         seconds--;
         timeleft.textContent = "Time Left: " + seconds;
-        if(seconds === 0) {
-            clearInterval(timerInterval);
-            gameoverscreen();
+        if(seconds <= 0) {
+            gameover();
         }
     }, 1000);
+    function gameover(){
+        ansA.remove();
+        ansB.remove();
+        ansC.remove();
+        ansD.remove();
+        gameoverscreen();
+        clearInterval(timerInterval);
+    }
     heading.textContent = "Question 1";
     question.textContent = "Which language forms the foundation of a webpage?";
     var ansA = document.createElement("button");
@@ -39,7 +46,7 @@ function questionone(){
     ansD.textContent = "Latin";
     ansA.addEventListener("click", correct)
         function correct(){
-        score = Number(score) + 20;
+        score = Number(score) + 10;
         questiontwo();
         }
     ansB.addEventListener("click", wrong)
@@ -81,7 +88,7 @@ function questionone(){
             }
         ansD.addEventListener("click", correct)
             function correct(){
-                score = Number(score) + 20;
+                score = Number(score) + 10;
                 questionthree();
              }
         function questionthree(){
@@ -93,7 +100,7 @@ function questionone(){
             ansD.textContent = "Figure";
             ansA.addEventListener("click", correct)
                 function correct(){
-                    score = Number(score) + 20;
+                    score = Number(score) + 10;
                     questionfour();
             }
             ansB.addEventListener("click", wrong)
@@ -120,7 +127,7 @@ function questionone(){
                 ansD.textContent = "const =";
                 ansA.addEventListener("click", correct)
                     function correct(){
-                        score = Number(score) + 20;
+                        score = Number(score) + 10;
                         questionfive();
                     }
                 ansB.addEventListener("click", wrong)
@@ -157,7 +164,7 @@ function questionone(){
                         }
                     ansC.addEventListener("click", correct)
                         function correct(){
-                            score = Number(score) + 20;
+                            score = Number(score) + 10;
                             gameover();
                         }
                     ansD.addEventListener("click", wrong)
@@ -165,19 +172,11 @@ function questionone(){
                             seconds = Number(seconds) - 10;
                             gameover();
                         }
-                    function gameover(){
-                        ansA.remove();
-                        ansB.remove();
-                        ansC.remove();
-                        ansD.remove();
-                        gameoverscreen();
-                        clearInterval(timerInterval);
                     }
                 }
             }
         }
-    }
-};
+    };
 
 function gamestart(){
     startbtn.remove();
@@ -199,7 +198,8 @@ function gameoverscreen(){
     form.append(save);
     container.appendChild(form);
     save.addEventListener("click", submithandler);
-    function submithandler(){
+    function submithandler(event){
+        event.preventDefault;
         localStorage.setItem("Initials", input.value)
         localStorage.setItem("Score", score)
     }
