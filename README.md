@@ -18,3 +18,4 @@ Once you click the start button, you will have one minute to answer all the give
 .1 - added styling in css
 .2 - adding beginning functions for questions and start button functionality
 .3 - adding functioning timer
+.4 - added gameover screen(wip) and nested timer inside question function
