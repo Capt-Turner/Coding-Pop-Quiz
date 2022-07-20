@@ -16,3 +16,4 @@ Once you click the start button, you will have one minute to answer all the give
 ### Changelog
 
 .1 - added styling in css
+.2 - adding beginning functions for questions

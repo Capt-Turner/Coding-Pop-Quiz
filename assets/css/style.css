@@ -5,7 +5,7 @@ body, html {
     background-size:cover;
     background-position:center;
 }
-.topbar {
+#topbar {
     font-size:125%;
     font-family:'Courier New';
 }
@@ -14,27 +14,32 @@ body, html {
     margin-top:-25px;
 
 }
-.container {
+#container {
     position:relative;
     margin-top:150px;
     margin-right:200px;
     margin-left:200px;
 }
-.container h1, p {
+#container h1, p {
     text-align:center;
 }
-.container h1 {
+#container h1 {
     font-family:Impact;
     text-shadow:3px 3px 2px grey;
     font-size:250%;
 }
-.container p {
+#container p {
     font-family:Arial;
     font-size:150%;
 }
-.container button {
+#startbtn {
     margin:0;
     left:45%;
     position:absolute;
     transform: translateY(50%, 50%);
 }
+.answerbtn {
+    display:block;
+    position:static;
+}
+
